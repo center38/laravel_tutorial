@@ -6,7 +6,7 @@
 
 @section('content')
 <!-- Content Start -->
-<section class="page-section">
+<section class="page-section my-5 p-5">
   <div class="container">
     <div class="product-item">
       <div class="product-item-title d-flex">
@@ -29,7 +29,7 @@
   </div>
 </section>
 
-<section class="page-section">
+<section class="page-section my-5 p-5">
   <div class="container">
     <div class="product-item">
       <div class="product-item-title d-flex">
@@ -52,7 +52,7 @@
   </div>
 </section>
 
-<section class="page-section">
+<section class="page-section my-5 p-5">
   <div class="container">
     <div class="product-item">
       <div class="product-item-title d-flex">
