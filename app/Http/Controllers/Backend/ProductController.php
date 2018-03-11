@@ -93,6 +93,9 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         if ($request->hasFile('image')) {
+            // 先刪除原本的圖片
+            if ($product->image != 'default')
+                @unlink('uploads/product/' . $product->image);
             $file = $request->file('image');
             $path = public_path() . '\uploads\product\\';
             $fileName = time() . '.' . $file->getClientOriginalExtension();
@@ -119,6 +122,8 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+        if ($product->image != 'default')
+            @unlink('uploads/product/' . $product->image);
         $product->delete();
         return redirect()->route('admin.product.index');
     }
