@@ -36,7 +36,7 @@ class AboutController extends Controller
 
         if ($request->hasFile('image')) {
             // 先刪除原本的圖片
-            if ($about->image != 'default')
+            if ($about->image != 'default.jpg')
                 @unlink('uploads/about/' . $about->image);
             $file = $request->file('image');
             $path = public_path() . '\uploads\about\\';

@@ -36,7 +36,7 @@ class HomeController extends Controller
 
         if ($request->hasFile('image')) {
             // 先刪除原本的圖片
-            if ($home->image != 'default')
+            if ($home->image != 'default.jpg')
                 @unlink('uploads/home/' . $home->image);
             $file = $request->file('image');
             $path = public_path() . '\uploads\home\\';

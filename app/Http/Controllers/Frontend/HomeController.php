@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\About;
+use App\Models\Home;
 use App\Models\Website;
-class AboutController extends Controller
-{
 
+class HomeController extends Controller
+{
     public function index ()
     {
-        $about = About::find(1);
+        $home = Home::find(1);
         $website = Website::find(1);
-        return view('frontend.about', compact('about', 'website'));
+        return view('frontend.index', compact('home', 'website'));
     }
 }
